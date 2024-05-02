@@ -19,6 +19,7 @@
 
   vars:
     cloud_provider: "{{ lookup('ansible.builtin.env', 'CLOUD_PROVIDER', default='') }}"
+    region_name: "{{ lookup('ansible.builtin.env', 'AWS_REGION', default='us-east-1') }}"
 
   tasks:
     - name: Validate global input
